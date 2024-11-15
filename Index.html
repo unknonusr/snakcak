@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake in a cake</title>
+    <link rel="icon" href="snak.png" type="png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <img id="pugImage" src="snak.png" alt="snake in a cake">
+        <div id="text-container">
+            <div id="score">Score: 0</div>
+            <div id="rank">Rank: Noob</div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize the score and time
+        let score = 0;
+        let time = 0;
+
+        // Function to update the score every second
+        setInterval(function() {
+            score++;  // Increase score by 1
+            time++;   // Increase time by 1 second
+
+            // Update the score and rank in the DOM
+            document.getElementById('score').textContent = 'Score: ' + score;
+
+            // Update the rank based on time
+            if (time >= 1000000) {
+                document.getElementById('rank').textContent = 'Rank: Holy Lord';
+            } else if (time >= 10000) {
+                document.getElementById('rank').textContent = 'Rank: God';
+            } else if (time >= 1000) {
+                document.getElementById('rank').textContent = 'Rank: Pro';
+            } else if (time >= 100) {
+                document.getElementById('rank').textContent = 'Rank: Armure';
+            } else if (time >= 60) {
+                document.getElementById('rank').textContent = 'Rank: Good';
+            }
+        }, 1000);  // The score will increase every 1 second
+    </script>
+</body>
+</html>

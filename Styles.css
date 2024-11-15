@@ -1,0 +1,29 @@
+/* Apply Comic Sans font */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Style the text container */
+#text-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #333;
+}
+
+/* Style the image */
+#pugImage {
+    width: 1000px;
+    height: auto;
+    margin-bottom: 20px;
+}
